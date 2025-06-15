@@ -8,15 +8,9 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.*;
 
-public class RegisterTests {
+public class RegisterTests extends TestBase {
 
     private static final String API_KEY = "reqres-free-v1";
-
-    @BeforeAll
-    public static void setUp() {
-        RestAssured.baseURI = "https://reqres.in";
-        RestAssured.basePath = "/api";
-    }
 
     @Test
     void successfulRegisterTest() {
