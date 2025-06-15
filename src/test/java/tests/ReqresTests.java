@@ -11,14 +11,9 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 import static specs.RegisterSpec.*;
 
-public class ReqresTests {
+public class ReqresTests extends TestBase {
 
     private static final String API_KEY = "reqres-free-v1";
-
-    @BeforeAll
-    public static void setUp() {
-        RestAssured.baseURI = "https://reqres.in";
-    }
 
     @Test
     @DisplayName("Successful registration")
